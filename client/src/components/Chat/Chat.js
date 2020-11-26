@@ -7,8 +7,8 @@ import TextContainer from '../TextContainer/TextContainer';
 import InfoBar from "../InfoBar/InfoBar";
 import Input from "../Input/Input";
 import Messages from "../Messages/Messages";
-import WebRTC from "../WebRTC/WebRTC";
-import WebRTC_Na from "../WebRTC/WebRTC_Na";
+// import WebRTC from "../WebRTC/WebRTC";
+import WebRTCSimperPeer from "../WebRTC/WebRTCSimperPeer";
 
 let socket;
 
@@ -69,10 +69,9 @@ const Chat = ({ location }) =>{
 
     return(
         <div className="outerContainer">
-            <div className="webrtc">
-                <WebRTC name = {name} room={room} endpoint={ENDPOINT} />
-
-            </div>
+            {/*<div className="webrtc">*/}
+            {/*    <WebRTCSimperPeer name = {name} room={room} endpoint={ENDPOINT} />*/}
+            {/*</div>*/}
             <div className="container">
                 <InfoBar room={room} />
                 <Messages messages={messages} name={name}/>

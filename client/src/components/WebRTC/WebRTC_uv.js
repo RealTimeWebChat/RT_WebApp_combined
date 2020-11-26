@@ -1,5 +1,6 @@
 import React, {useState, useRef,useEffect} from "react";
 
+// const peersjs = require("https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js");
 
 
 let socket;
@@ -19,7 +20,7 @@ const peers = {};
 //     // videoGrid.append(video)
 // }
 
-const WebRTC =({name, room}) =>{
+const WebRTC =({name, room,endpoint}) =>{
     //initial setstream
     const [stream, setStream] = useState();
     const userVideo = useRef();
@@ -121,7 +122,7 @@ const WebRTC =({name, room}) =>{
     let UserVideo;
     if (stream) {
         UserVideo = (
-            <video playsInline muted ref={userVideo} autoPlay />
+            <video playsInline muted ref={userVideo} autoPlay/>
         );
     }
 
